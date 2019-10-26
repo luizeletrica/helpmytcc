@@ -1,47 +1,73 @@
-/////////////vers„o com erro
+Ultima Atualiza√ß√£o 26/10
+
+/////////////vers√£o "agora foi! 5" Atualizada com Novo erro
+thikspeak4(small)
+/////////////
+
+O arquivo "thikspeak4(small)" √© um programa da -Tomada monitorada wifi V5- ultilizando um NODEMCU ESP32. Vers√£o atualizada da ultima vers√£o testada "agorafoi!5"
+
+Este projeto tem a finalidade do usuario de monitorar seu consumo de energia e poder acionar seu equipamento atrav√©s da rede local wifi.
+Como ainda est√° em FASE DE TESTES, nesta vers√£o foi fixado um valor de 78U para envio do thingspeak.
+
+Erros corrigidos do "agorafoi!5"
+ERROS
+**1 - Nesta vers√£o 5, o gr√°fico do ThinkSpeak n√£o funciona, (hipotese: n√£o est√° recebendo ou enviando os dados). 
+	//CORRIGIDO HIPOTESE CONFIRMADA, O ESP N√ÉO ENVIAVA OS DADOS PARA O thingspeak.
+
+NOVOS ERROS
+**I - O Esp32 n√£o possui mais um ip fixo, quando a linha 117 esta descomentada, pode se vizualizar a IHM, porem o envio para thingspeak n√£o funciona.
+
+**II - N√£o √© possivel vizualizar os valores da IHM, "Corrente, Tensao, Potencia, Consumo(Kw)" provavelmente est√£o demorando para serem mostrados
+
+**III - O comando para ligar ou desligar a lampada pode demorar at√©  mais 1 minuto
+
+obs. de maneira geral o sistema inteiro ficou mais lento. com excess√£o do thingspeak que mantem seu envio do iframe a cada 15seg aprox.
+
+
+/////////////vers√£o com erro
 agora foi! 5
 /////////////
 
-O arquivo "agora foi! 5" È um programa da -Tomada monitorada wifi V5- ultilizando um NODEMCU ESP32.
+O arquivo "agora foi! 5" √© um programa da -Tomada monitorada wifi V5- ultilizando um NODEMCU ESP32.
 
-Este projeto tem a finalidade do usuario de monitorar seu consumo de energia e poder acionar seu equipamento atravÈs da rede local wifi.
-Como ainda est· em FASE DE TESTES, est· sendo ultilizado um sensor LDR.
+Este projeto tem a finalidade do usuario de monitorar seu consumo de energia e poder acionar seu equipamento atrav√©s da rede local wifi.
+Como ainda est√° em FASE DE TESTES, est√° sendo ultilizado um sensor LDR.
 
-Este cÛdigo foi criado atraves da base de diversos cÛdigos:
+Este c√≥digo foi criado atraves da base de diversos c√≥digos:
 
 Youtube -  Canal G6EJD (https://www.youtube.com/channel/UCgtlqH_lkMdIa4jZLItcsTg)
 FilipeFlop - Planta Iot (https://www.filipeflop.com/blog/planta-iot-com-esp8266-nodemcu/)
-	   - AutomaÁ„o Residencial com Arduino (https://www.filipeflop.com/blog/automacao-residencial-com-arduino-acenda-lampadas-pela-internet/)
+	   - Automa√ß√£o Residencial com Arduino (https://www.filipeflop.com/blog/automacao-residencial-com-arduino-acenda-lampadas-pela-internet/)
 Fernando K - ESP8266: como monitorar temperatura e umidade (https://www.fernandok.com/2017/10/blog-post.html)
-	   - N„o perca tempo: use NTP! (https://www.fernandok.com/2018/12/nao-perca-tempo-use-ntp.html)
+	   - N√£o perca tempo: use NTP! (https://www.fernandok.com/2018/12/nao-perca-tempo-use-ntp.html)
 
 ERROS
-**1 - Nesta vers„o 5, o gr·fico do ThinkSpeak n„o funciona, (hipotese: n„o est· recebendo ou enviando os dados). 
-**2 - Protocolo NTP tambem n„o funcionou, pois este seria ultilizado para criar um data logger de contagem de minutos/horas no dia em que o sensor marcou acima de 0A
-para a memÛria interna do Nodemcu. Assim poderia se calcular o valor previsto e atual de consumo.(n„o esta agregado na vers„o agorafoi!5 e nem na agorafoi!4).
-**3 - Nesta vers„o tambem h· um problema com o JavaScript/CSS. Deveria mostrar uma lampada de identificaÁ„o
-quando o equipamento/lampada estiver ligado (acesa) e desligada(apagada). O codigo base foi ultilizado -AutomaÁ„o Residencial com Arduino- do FilipeFlop.
+**1 - Nesta vers√£o 5, o gr√°fico do ThinkSpeak n√£o funciona, (hipotese: n√£o est√° recebendo ou enviando os dados). 
+**2 - Protocolo NTP tambem n√£o funcionou, pois este seria ultilizado para criar um data logger de contagem de minutos/horas no dia em que o sensor marcou acima de 0A
+para a mem√≥ria interna do Nodemcu. Assim poderia se calcular o valor previsto e atual de consumo.(n√£o esta agregado na vers√£o agorafoi!5 e nem na agorafoi!4).
+**3 - Nesta vers√£o tambem h√° um problema com o JavaScript/CSS. Deveria mostrar uma lampada de identifica√ß√£o
+quando o equipamento/lampada estiver ligado (acesa) e desligada(apagada). O codigo base foi ultilizado -Automa√ß√£o Residencial com Arduino- do FilipeFlop.
 
 
-////////////////////vers„o ok
+////////////////////vers√£o ok
 thinkSpeak3(small)
 ///////////////////
 
-CÛdigo baseado no -Planta Iot- do FilipeFlop, foi otimizado e agregado ao codigo principal "agora foi! 5"
+C√≥digo baseado no -Planta Iot- do FilipeFlop, foi otimizado e agregado ao codigo principal "agora foi! 5"
 
 
-//////////////////////////versıes ok
+//////////////////////////vers√µes ok
 NTP1ok, NTP2ok e NTP3ok
 /////////////////////////
 
-CÛdigos baseados em diferentes, sendo NTP3 do Fernando K. Todos os trÍs foram otimizados para serem agregados na vers„o 4 do projeto "agora foi!4".
-Separadamente todos funcionam, porem quando foram agregadas, nenhum dos NTPxok funcionoou com a vers„o 4, onde elas entraram em conflito.
+C√≥digos baseados em diferentes, sendo NTP3 do Fernando K. Todos os tr√™s foram otimizados para serem agregados na vers√£o 4 do projeto "agora foi!4".
+Separadamente todos funcionam, porem quando foram agregadas, nenhum dos NTPxok funcionoou com a vers√£o 4, onde elas entraram em conflito.
 
 
-/////////////vers„o ok
+/////////////vers√£o ok
 agora foi! 4
 /////////////
 
-Vers„o anterior funciona corretamente acionando o rele, medindo o sensor e fazendo os calculos.
-Ela N√O conta com a identificaÁ„o de lampada acesa ou apagada(apenas uma lampada apagada para demarcar lugar), n„o h· grafico, e n„o h· relogio. 
+Vers√£o anterior funciona corretamente acionando o rele, medindo o sensor e fazendo os calculos.
+Ela N√ÉO conta com a identifica√ß√£o de lampada acesa ou apagada(apenas uma lampada apagada para demarcar lugar), n√£o h√° grafico, e n√£o h√° relogio. 
  
